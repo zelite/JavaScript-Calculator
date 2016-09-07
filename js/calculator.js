@@ -117,6 +117,13 @@ var octopus = {
           event.preventDefault();
           $("button.equal").click();
         }
+        else if(event.which == 46){
+            $("button.clearAll").click();
+        }
+        else if(event.which == 8){
+            event.preventDefault();
+            $("button.correctEntry").click();
+        }
         else if("123456789".indexOf(event.key) != -1) {//if one of the numbers
             $("button.number:contains("+event.key+")").click();
         }
@@ -137,7 +144,7 @@ var view = {
         $("button.clearAll").click(octopus.clearAll);
         $("button.correctEntry").click(octopus.correctEntry);
         $("button.equal").click(octopus.equal);
-        $("body").keypress(octopus.keyboard);
+        $("body").keydown(octopus.keyboard);
         this.render();
         
     },
