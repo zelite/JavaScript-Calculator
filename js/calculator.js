@@ -127,7 +127,7 @@ var octopus = {
         else if("0123456789".indexOf(event.key) != -1) {//if one of the numbers
             $("button.number:contains("+event.key+")").click();
         }
-        else if(event.keyCode == 44){
+        else if(event.keyCode == 110){
             $("button.decimal").click();
         }
         else if("+-*/".indexOf(event.key) != -1){
