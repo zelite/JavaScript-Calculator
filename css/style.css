@@ -14,13 +14,17 @@ body{
     float:right;
     overflow: hidden;
     font-family: 'Roboto Mono', monospace;
-    user-select: none;
+    cursor: default;
 }
 
 #calculator{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
     box-sizing: border-box;
     width: 320px;
     background-color: white;
+    box-shadow: 0px 0px 8px 0px #000000;
 }
 
 /*clearfix because the contents are all floating*/
@@ -58,14 +62,15 @@ button{
     height: 80px;
 }
 
-.num-pad button:active{
-    background-color: #344344;
-}
-
 .num-pad button:focus{
     background-color: #192021;
     outline: none;
 }
+
+.num-pad button:active{
+    background-color: #344344;
+}
+
 
 .operator-pad{
     float: right;
@@ -78,12 +83,13 @@ button{
     font-size: 20px;
 }
 
-.operator-pad button:active{
-    background-color: #4E898E;
-}
-
 .operator-pad button:focus{
     background-color: #233D3F;
     outline: none;
+    
+}
+
+.operator-pad button:active{
+    background-color: #4E898E;
 }
 
