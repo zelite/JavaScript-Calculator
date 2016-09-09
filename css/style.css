@@ -1,3 +1,89 @@
-#display{
-    height: 1.5rem;
+body{
+    background-color: #2978A0;
 }
+#currentChain{
+    font-size: 30px;
+}
+
+#currentChain, #currentResult{
+    height: 60px;
+    width: 320px;
+    line-height: 60px;
+    text-align: right;
+    padding: 5px;
+    float:right;
+    overflow: hidden;
+    font-family: 'Roboto Mono', monospace;
+    user-select: none;
+}
+
+#calculator{
+    box-sizing: border-box;
+    width: 320px;
+    background-color: white;
+}
+
+/*clearfix because the contents are all floating*/
+#calculator::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+button{
+    display: block;
+    float: left;
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+    width: 80px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: none;
+    border: none;
+    color: white;
+   
+}
+
+
+.num-pad{
+    float: left;
+    width: 240px;
+}
+
+.num-pad button{
+    background-color: #253031;
+    font-size:30px;
+    height: 80px;
+}
+
+.num-pad button:active{
+    background-color: #344344;
+}
+
+.num-pad button:focus{
+    background-color: #192021;
+    outline: none;
+}
+
+.operator-pad{
+    float: right;
+    width: 80px;
+}
+
+.operator-pad button{
+    background-color: #315659;
+    height: 53.3333333333px;
+    font-size: 20px;
+}
+
+.operator-pad button:active{
+    background-color: #4E898E;
+}
+
+.operator-pad button:focus{
+    background-color: #233D3F;
+    outline: none;
+}
+

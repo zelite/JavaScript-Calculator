@@ -39,6 +39,7 @@ var model = {
                 chain = chain.slice(0, -1);
             this.currentResult = math.eval(chain);
         }
+        console.log(model.currentResult);
     }
 };
 
@@ -103,10 +104,12 @@ var octopus = {
         view.render();
     },
     equal: function(){
+        model.waitingOperation = true;
+        model.compute();        
         var result = model.currentResult;
         model.reset();
         if(result != ""){
-            model.currentChain = result.toString();
+            model.currentChain = math.format(result, 10);
             model.currentNumber = result.toString();
         }
         view.render();
