@@ -2,7 +2,7 @@
 math.config({
   number: 'BigNumber', // Default type of number:
                        // 'number' (default), 'BigNumber', or 'Fraction'
-  precision: 64        // Number of significant digits for BigNumbers
+  precision: 20        // Number of significant digits for BigNumbers
 });
 
 var operators = "+-&divide;&times;÷×";
