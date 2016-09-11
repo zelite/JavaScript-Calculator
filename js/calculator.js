@@ -44,7 +44,6 @@ var model = {
                 chain = chain.slice(0, -1);
             this.currentResult = math.eval(chain);
         }
-        console.log(model.currentResult);
     }
 };
 
@@ -165,4 +164,4 @@ var view = {
 $(document).ready(function(){
     model.init();
     view.init();
-})
+});
