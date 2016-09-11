@@ -14,7 +14,12 @@ var operatorConversion = {
     "÷": "/",
     "×": "*",
     "*": "×",
-    "/": "÷"
+    "/": "÷",
+    //MS Edge has different keycodes
+    "Add": "+", 
+    "Subtract": "-",
+    "Multiply": "*",
+    "Divide": "/"
 };
 
 function isOperator(char){
@@ -133,7 +138,7 @@ var octopus = {
         else if(event.keyCode == 110){
             $("button.decimal").click();
         }
-        else if("+-*/".indexOf(event.key) != -1){
+        else if(["+", "-", "*", "/", "Add", "Subtract", "Multiply", "Divide"].indexOf(event.key) != -1){
             var op = operatorConversion[event.key];
             $("button.operator:contains("+op+")").click();
         }}
