@@ -9,8 +9,6 @@ var operators = "+-&divide;&times;÷×";
 var operatorConversion = {
     "+": "+",
     "-": "-",
-    "&divide;": "/",
-    "&times;":"*",
     "÷": "/",
     "×": "*",
     "*": "×",
@@ -18,8 +16,8 @@ var operatorConversion = {
     //MS Edge has different keycodes
     "Add": "+", 
     "Subtract": "-",
-    "Multiply": "*",
-    "Divide": "/"
+    "Multiply": "×",
+    "Divide": "÷"
 };
 
 function isOperator(char){
@@ -162,6 +160,10 @@ var view = {
 };
 
 $(document).ready(function(){
+    math.eval("1"); 
+    // math.js takes longer on the first eval. this is noticed on mobile browsers
+    //forcing an evaluation on the begining will make the first actual calculation
+    //in the calculator smoother;
     model.init();
     view.init();
 });

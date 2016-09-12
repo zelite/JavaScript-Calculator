@@ -8,16 +8,21 @@ body{
 }
 
 #currentChain, #currentResult{
+    min-width: 320px;
+    display: block;
     box-sizing: border-box;
     height: 60px;
-    width: 320px;
     line-height: 60px;
     text-align: right;
     padding: 5px;
     float:right;
-    overflow: hidden;
     font-family: 'Roboto Mono', monospace;
     cursor: default;
+}
+
+#screen{
+    width:320px;
+    overflow: hidden;
 }
 
 #calculator{
@@ -96,3 +101,13 @@ button{
     background-color: #4E898E;
 }
 
+footer{
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+footer a{
+    color: #87d5fd;
+}
